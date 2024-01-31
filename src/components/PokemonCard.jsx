@@ -1,15 +1,18 @@
 import PropTypes from "prop-types";
+
 function PokemonCard(props) {
   console.log(props);
 
+  const { pokemon } = props;
+
   return (
     <figure>
-      {props.pokemon[0].imgSrc ? (
-        <img src={props.pokemon[0].imgSrc} alt={props.pokemon[0].name} />
+      {pokemon.imgSrc ? (
+        <img src={pokemon.imgSrc} alt={pokemon.name} />
       ) : (
         <p>???</p>
       )}
-      <figcaption>{props.pokemon[0].name}</figcaption>
+      <figcaption>{pokemon.name}</figcaption>
     </figure>
   );
 }
